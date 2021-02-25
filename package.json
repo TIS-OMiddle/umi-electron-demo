@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cross-env APP_ROOT=src/renderer umi dev",
     "build": "cross-env APP_ROOT=src/renderer umi build",
+    "build:analyze": "cross-env APP_ROOT=src/renderer ANALYZE=1 umi build",
     "postinstall": "cross-env APP_ROOT=src/renderer umi generate tmp",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}\"",
     "test": "cross-env APP_ROOT=src/renderer umi-test",
@@ -29,9 +30,16 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "@umijs/preset-react": "1.x",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.21",
+    "react-query": "^3.12.0",
+    "recoil": "^0.1.2",
     "umi": "^3.3.7"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.11",
+    "@types/lodash": "^4.14.168",
     "@types/node": "^12.0.12",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
@@ -50,6 +58,7 @@
     "react-dom": "17.x",
     "typescript": "^4.1.2",
     "umi-plugin-electron-builder": "^1.0.17",
+    "umi-plugin-tailwindcss": "^3.0.0",
     "yorkie": "^2.0.0"
   }
 }

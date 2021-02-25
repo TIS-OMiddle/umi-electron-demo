@@ -7,6 +7,9 @@ export default defineConfig({
   alias: {
     '@/common': resolve(__dirname, '../common'),
   },
+  extraBabelPlugins: [
+    ["import", { "libraryName": "lodash", "libraryDirectory": "" }]
+  ],
   electronBuilder: {
     mainWebpackConfig(config: Configuration) {
       config.resolve!.alias = {

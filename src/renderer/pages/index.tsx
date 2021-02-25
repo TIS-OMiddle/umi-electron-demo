@@ -1,19 +1,13 @@
 import React from 'react';
 import Logo from '@/assets/logo.ico';
+import { trim } from 'lodash';
+import './index.less';
 
 const App = props => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <div className="app">
       <img src={Logo}></img>
-      <h1>Page Index</h1>
+      <h1 className="text-indigo-500">{trim('Page Index')}</h1>
     </div>
   );
 };
